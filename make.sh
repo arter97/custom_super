@@ -16,7 +16,9 @@ ACTIVE_SLOT=a
 INACTIVE_SLOT=b
 
 STOCK_FIRMWARE=/home/arter97/Downloads/op9/out
-OUT=/tmp/root
+OUT=new
+
+TMP=/tmp/$(uuidgen)
 
 MKFS="mkfs.ext4 \
   -b 4096 \
@@ -24,40 +26,44 @@ MKFS="mkfs.ext4 \
   -E lazy_itable_init=0,lazy_journal_init=0,nodiscard \
   -F -m 0"
 
+mkdir -p $OUT
 for i in system system_ext product vendor; do
+  echo "Creating $i.img"
   eval SIZE='$'$(echo $i | tr '[:lower:]' '[:upper:]')_SIZE
-  fallocate -l $SIZE $i.img
-  $MKFS $i.img
+  fallocate -l $SIZE $OUT/$i.img
+  $MKFS $OUT/$i.img
   mkdir -p orig/$i $OUT/$i
-  mount "$STOCK_FIRMWARE/$i.img" orig/$i
-  mount $i.img $OUT/$i
-  echo "Copying $i data"
-  rsync -ahAXx --inplace --numeric-ids orig/$i/ $OUT/$i/
-done
+  mount -t ext4 -o ro "$STOCK_FIRMWARE/$i.img" orig/$i
+  mount -t ext4 $OUT/$i.img $OUT/$i
 
-echo "Removing files"
-while read f; do
-  rm "$f"
-done < remove.txt
+  echo "Copying $i data"
+  if cat remove.txt | grep -q "^$i/"; then
+    cat remove.txt | grep "^$i/" | cut -c$((${#i} + 2))- > $TMP
+    rsync -ahAXx --exclude-from $TMP --inplace --numeric-ids orig/$i/ $OUT/$i/
+  else
+    rsync -ahAXx --inplace --numeric-ids orig/$i/ $OUT/$i/
+  fi
+done
 
 echo "Adding files"
 ./restore.sh
 rsync -ahAX --inplace --numeric-ids files/ $OUT/
 
 echo "Patching files"
-cd patches
-TMP=/tmp/$(uuidgen)
-find . -type f | while read f; do
+find patches/ -type f | cut -c9- | while read f; do
   getfacl -Pn "$OUT/$f" > ${TMP}.acl
   getfattr -dhP -m- "$OUT/$f" > ${TMP}.xattr
-  patch --no-backup-if-mismatch -r - "$OUT/$f" < "$f"
+  patch --no-backup-if-mismatch -r - "$OUT/$f" < "patches/$f"
   setfacl -P --restore=${TMP}.acl
   setfattr -h --restore=${TMP}.xattr
 done
 rm ${TMP}.acl ${TMP}.xattr
 
 echo "Unmounting"
-umount "$OUT/"*
+for i in system system_ext product vendor; do
+  umount "$OUT/$i"
+  umount "orig/$i"
+done
 
 echo "Creating super.img"
 $LPMAKE \
@@ -69,23 +75,23 @@ $LPMAKE \
     --super-name=super \
     --virtual-ab \
     --sparse \
-    -o $OUT/../super.img \
+    -o $OUT/super.img \
     -g qti_dynamic_partitions_${INACTIVE_SLOT}:$(($SUPER_SIZE - $ALIGN)) \
     -g qti_dynamic_partitions_${ACTIVE_SLOT}:$(($SUPER_SIZE - $ALIGN)) \
     -p system_${INACTIVE_SLOT}:none:0:qti_dynamic_partitions_${INACTIVE_SLOT} \
     -p system_${ACTIVE_SLOT}:none:${SYSTEM_SIZE}:qti_dynamic_partitions_${ACTIVE_SLOT} \
-    -i system_${ACTIVE_SLOT}=system.img \
+    -i system_${ACTIVE_SLOT}="$OUT/"system.img \
     -p system_ext_${INACTIVE_SLOT}:none:0:qti_dynamic_partitions_${INACTIVE_SLOT} \
     -p system_ext_${ACTIVE_SLOT}:none:${SYSTEM_EXT_SIZE}:qti_dynamic_partitions_${ACTIVE_SLOT} \
-    -i system_ext_${ACTIVE_SLOT}=system_ext.img \
+    -i system_ext_${ACTIVE_SLOT}="$OUT/"system_ext.img \
     -p product_${INACTIVE_SLOT}:none:0:qti_dynamic_partitions_${INACTIVE_SLOT} \
     -p product_${ACTIVE_SLOT}:none:${PRODUCT_SIZE}:qti_dynamic_partitions_${ACTIVE_SLOT} \
-    -i product_${ACTIVE_SLOT}=product.img \
+    -i product_${ACTIVE_SLOT}="$OUT/"product.img \
     -p vendor_${INACTIVE_SLOT}:none:0:qti_dynamic_partitions_${INACTIVE_SLOT} \
     -p vendor_${ACTIVE_SLOT}:none:${VENDOR_SIZE}:qti_dynamic_partitions_${ACTIVE_SLOT} \
-    -i vendor_${ACTIVE_SLOT}=vendor.img \
+    -i vendor_${ACTIVE_SLOT}="$OUT/"vendor.img \
     -p odm_${INACTIVE_SLOT}:none:0:qti_dynamic_partitions_${INACTIVE_SLOT} \
     -p odm_${ACTIVE_SLOT}:none:$(stat -c %s "$STOCK_FIRMWARE/odm.img"):qti_dynamic_partitions_${ACTIVE_SLOT} \
     -i odm_${ACTIVE_SLOT}="$STOCK_FIRMWARE/odm.img"
 
-ls -al $OUT/../super.img
+ls -al $OUT/super.img
