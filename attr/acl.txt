@@ -1,0 +1,245 @@
+# file: .
+# owner: 1000
+# group: 1000
+user::rwx
+group::rwx
+other::r-x
+
+# file: system_ext
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system_ext/etc
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system_ext/etc/permissions
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system_ext/etc/permissions/privapp-permissions-app.lawnchair.xml
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system_ext/etc/sysconfig
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system_ext/etc/sysconfig/app.lawnchair-hiddenapi-package-whitelist.xml
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system_ext/overlay
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system_ext/overlay/QuickSwitchOverlay.apk
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system_ext/priv-app
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system_ext/priv-app/Lawnchair
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system_ext/priv-app/Lawnchair/Lawnchair.apk
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor
+# owner: 0
+# group: 2000
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor/lib
+# owner: 0
+# group: 2000
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor/lib/soundfx
+# owner: 0
+# group: 2000
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor/lib/soundfx/libv4a_fx.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/etc
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/etc/init
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/etc/init/rdnsd.rc
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/etc/permissions
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/etc/permissions/bbs.xml
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/etc/permissions/com.oasisfeng.greenify.xml
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/BBS
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/BBS/BBS.apk
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/Greenify
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/Greenify/Greenify.apk
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/v4a
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/v4a/v4a.apk
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/v4a/lib
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/v4a/lib/arm64
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/v4a/lib/arm64/libnrb.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/v4a/lib/arm64/libV4AJniUtils.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+

@@ -1,0 +1,102 @@
+# file: system_ext
+security.selinux="u:object_r:system_file:s0"
+
+# file: system_ext/etc
+security.selinux="u:object_r:system_file:s0"
+
+# file: system_ext/etc/permissions
+security.selinux="u:object_r:system_file:s0"
+
+# file: system_ext/etc/permissions/privapp-permissions-app.lawnchair.xml
+security.selinux="u:object_r:system_file:s0"
+
+# file: system_ext/etc/sysconfig
+security.selinux="u:object_r:system_file:s0"
+
+# file: system_ext/etc/sysconfig/app.lawnchair-hiddenapi-package-whitelist.xml
+security.selinux="u:object_r:system_file:s0"
+
+# file: system_ext/overlay
+security.selinux="u:object_r:vendor_overlay_file:s0"
+
+# file: system_ext/overlay/QuickSwitchOverlay.apk
+security.selinux="u:object_r:vendor_overlay_file:s0"
+
+# file: system_ext/priv-app
+security.selinux="u:object_r:system_file:s0"
+
+# file: system_ext/priv-app/Lawnchair
+security.selinux="u:object_r:system_file:s0"
+
+# file: system_ext/priv-app/Lawnchair/Lawnchair.apk
+security.selinux="u:object_r:system_file:s0"
+
+# file: vendor
+security.selinux="u:object_r:vendor_file:s0"
+
+# file: vendor/lib
+security.selinux="u:object_r:vendor_file:s0"
+
+# file: vendor/lib/soundfx
+security.selinux="u:object_r:vendor_file:s0"
+
+# file: vendor/lib/soundfx/libv4a_fx.so
+security.selinux="u:object_r:vendor_file:s0"
+
+# file: system
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/etc
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/etc/init
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/etc/init/rdnsd.rc
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/etc/permissions
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/etc/permissions/bbs.xml
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/etc/permissions/com.oasisfeng.greenify.xml
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/BBS
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/BBS/BBS.apk
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/Greenify
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/Greenify/Greenify.apk
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/v4a
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/v4a/v4a.apk
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/v4a/lib
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/v4a/lib/arm64
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/v4a/lib/arm64/libnrb.so
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/v4a/lib/arm64/libV4AJniUtils.so
+security.selinux="u:object_r:system_file:s0"
+

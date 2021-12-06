@@ -1,0 +1,18 @@
+on property:net.dns1=*
+    start rdnsd_restart
+
+on property:sys.boot_completed=1
+    start rdnsd
+
+service rdnsd /system/bin/su -c /data/local/tmp/rdnsd
+    user root
+    group root
+    disabled
+    seclabel u:r:shell:s0
+
+service rdnsd_restart /system/bin/su -c "killall -SIGUSR1 rdnsd"
+    user root
+    group root
+    oneshot
+    disabled
+    seclabel u:r:shell:s0

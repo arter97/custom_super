@@ -1,0 +1,4 @@
+!files/**
+!attr/*.txt
+/root/
+

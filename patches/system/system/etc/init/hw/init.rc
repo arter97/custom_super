@@ -1,0 +1,21 @@
+--- a/system/system/etc/init/hw/init.rc	2009-01-01 09:00:00.000000000 +0900
++++ b/system/system/etc/init/hw/init.rc	2021-11-13 20:39:43.340056345 +0900
+@@ -1020,14 +1020,14 @@
+     # to avoid power consumption when system becomes mostly idle. Be careful
+     # to make it too large, since it may bring userdata loss, if they
+     # are not aware of using fsync()/sync() to prepare sudden power-cut.
+-    write /sys/fs/f2fs/${dev.mnt.blk.data}/cp_interval 200
+-    write /sys/fs/f2fs/${dev.mnt.blk.data}/gc_urgent_sleep_time 50
+-    write /sys/fs/f2fs/${dev.mnt.blk.data}/iostat_enable 1
++    write /sys/fs/f2fs/sda20/cp_interval 200
++    write /sys/fs/f2fs/sda20/gc_urgent_sleep_time 50
++    write /sys/fs/f2fs/sda20/iostat_enable 1
+ 
+     # limit discard size to 128MB in order to avoid long IO latency
+     # for filesystem tuning first (dm or sda)
+     # Note that, if dm-<num> is used, sda/mmcblk0 should be tuned in vendor/init.rc
+-    write /sys/devices/virtual/block/${dev.mnt.blk.data}/queue/discard_max_bytes 134217728
++    write /sys/block/sda/queue/discard_max_bytes 134217728
+ 
+     # Permissions for System Server and daemons.
+     chown system system /sys/power/autosleep
