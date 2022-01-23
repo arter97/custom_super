@@ -67,6 +67,9 @@ security.selinux="u:object_r:system_file:s0"
 # file: system/system/etc/permissions/com.oasisfeng.greenify.xml
 security.selinux="u:object_r:system_file:s0"
 
+# file: system/system/etc/permissions/call_recorder.xml
+security.selinux="u:object_r:system_file:s0"
+
 # file: system/system/priv-app
 security.selinux="u:object_r:system_file:s0"
 
@@ -98,5 +101,38 @@ security.selinux="u:object_r:system_file:s0"
 security.selinux="u:object_r:system_file:s0"
 
 # file: system/system/priv-app/v4a/lib/arm64/libV4AJniUtils.so
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/CallRecorder
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/CallRecorder/CallRecorder.apk
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/CallRecorder/lib
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/CallRecorder/lib/arm64
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/CallRecorder/lib/arm64/libvorbis.so
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/CallRecorder/lib/arm64/libopus.so
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/CallRecorder/lib/arm64/liblame.so
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/CallRecorder/lib/arm64/libogg.so
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/CallRecorder/lib/arm64/libvorbisjni.so
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/CallRecorder/lib/arm64/libopusjni.so
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/CallRecorder/lib/arm64/liblamejni.so
 security.selinux="u:object_r:system_file:s0"
 

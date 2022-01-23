@@ -166,6 +166,13 @@ user::rw-
 group::r--
 other::r--
 
+# file: system/system/etc/permissions/call_recorder.xml
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
 # file: system/system/priv-app
 # owner: 0
 # group: 0
@@ -237,6 +244,83 @@ group::r--
 other::r--
 
 # file: system/system/priv-app/v4a/lib/arm64/libV4AJniUtils.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorder
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/CallRecorder/CallRecorder.apk
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorder/lib
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/CallRecorder/lib/arm64
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/CallRecorder/lib/arm64/libvorbis.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorder/lib/arm64/libopus.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorder/lib/arm64/liblame.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorder/lib/arm64/libogg.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorder/lib/arm64/libvorbisjni.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorder/lib/arm64/libopusjni.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorder/lib/arm64/liblamejni.so
 # owner: 0
 # group: 0
 user::rw-
