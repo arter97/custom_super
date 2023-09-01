@@ -98,6 +98,12 @@ cd ..
 rsync -ahAX --inplace --numeric-ids .files/ out/
 rm -rf .files
 
+cd append
+find -type f | while read f; do
+  cat "$f" >> ../out/"$f"
+done
+cd ..
+
 echo "Unmounting"
 for i in $MOD; do
   umount "out/$i" &
