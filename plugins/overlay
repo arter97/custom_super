@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -eo pipefail
+
+cd overlay
+while read d; do
+  (
+  cd $d
+  apktool b
+  cd dist
+  signapk *.apk
+  chown 0:0 *.apk
+  chmod 644 *.apk
+  chcon u:object_r:system_file:s0 *.apk
+  ls -al *.apk
+  mv *.apk ../../../out/product/overlay/
+  cd ../..
+  ) &
+done < <(ls -d */)
+wait
+cd ..

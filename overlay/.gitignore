@@ -1,0 +1,4 @@
+*.apk
+build
+dist
+orig

@@ -5,6 +5,7 @@
 *.img
 *.raw
 .*
+!.gitignore
 
 !files/**
 !attr/*.txt
