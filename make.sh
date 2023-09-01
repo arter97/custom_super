@@ -116,6 +116,9 @@ find -type f | while read f; do
 done
 cd ..
 
+echo "Running custom plugins"
+run-parts --exit-on-error -v plugins
+
 echo "Unmounting"
 for i in $MOD; do
   umount "out/$i" &
