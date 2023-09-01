@@ -2,3 +2,6 @@
 on property:sys.boot_completed=1
     write /proc/sys/vm/dirty_background_bytes 52428800
     write /proc/sys/vm/dirty_bytes 209715200
+
+on property:bootreceiver.enable=1
+    setprop bootreceiver.enable 0
