@@ -39,26 +39,28 @@
           <axis tag="wdth" stylevalue="100" />
           <axis tag="wght" stylevalue="300" />
         </font>
-        <font weight="400" style="normal">Roboto-Regular.ttf
-          <axis tag="ital" stylevalue="0" />
-          <axis tag="wdth" stylevalue="100" />
-          <axis tag="wght" stylevalue="400" />
+
+        <font weight="400" style="normal">GoogleSans-Regular.ttf
+            <axis tag="GRAD" stylevalue="0"/>
+            <axis tag="opsz" stylevalue="18.0"/>
+            <axis tag="wght" stylevalue="400"/>
         </font>
-        <font weight="500" style="normal">Roboto-Regular.ttf
-          <axis tag="ital" stylevalue="0" />
-          <axis tag="wdth" stylevalue="100" />
-          <axis tag="wght" stylevalue="500" />
+        <font weight="500" style="normal">GoogleSans-Regular.ttf
+            <axis tag="GRAD" stylevalue="0"/>
+            <axis tag="opsz" stylevalue="18.0"/>
+            <axis tag="wght" stylevalue="500"/>
         </font>
-        <font weight="600" style="normal">Roboto-Regular.ttf
-          <axis tag="ital" stylevalue="0" />
-          <axis tag="wdth" stylevalue="100" />
-          <axis tag="wght" stylevalue="600" />
+        <font weight="600" style="normal">GoogleSans-Regular.ttf
+            <axis tag="GRAD" stylevalue="0"/>
+            <axis tag="opsz" stylevalue="18.0"/>
+            <axis tag="wght" stylevalue="600"/>
         </font>
-        <font weight="700" style="normal">Roboto-Regular.ttf
-          <axis tag="ital" stylevalue="0" />
-          <axis tag="wdth" stylevalue="100" />
-          <axis tag="wght" stylevalue="700" />
+        <font weight="700" style="normal">GoogleSans-Regular.ttf
+            <axis tag="GRAD" stylevalue="0"/>
+            <axis tag="opsz" stylevalue="18.0"/>
+            <axis tag="wght" stylevalue="700"/>
         </font>
+
         <font weight="800" style="normal">Roboto-Regular.ttf
           <axis tag="ital" stylevalue="0" />
           <axis tag="wdth" stylevalue="100" />
@@ -84,26 +86,28 @@
           <axis tag="wdth" stylevalue="100" />
           <axis tag="wght" stylevalue="300" />
         </font>
-        <font weight="400" style="italic">Roboto-Regular.ttf
-          <axis tag="ital" stylevalue="1" />
-          <axis tag="wdth" stylevalue="100" />
-          <axis tag="wght" stylevalue="400" />
+
+        <font weight="400" style="italic">GoogleSans-Italic.ttf
+            <axis tag="GRAD" stylevalue="0"/>
+            <axis tag="opsz" stylevalue="18.0"/>
+            <axis tag="wght" stylevalue="400"/>
         </font>
-        <font weight="500" style="italic">Roboto-Regular.ttf
-          <axis tag="ital" stylevalue="1" />
-          <axis tag="wdth" stylevalue="100" />
-          <axis tag="wght" stylevalue="500" />
+        <font weight="500" style="italic">GoogleSans-Italic.ttf
+            <axis tag="GRAD" stylevalue="0"/>
+            <axis tag="opsz" stylevalue="18.0"/>
+            <axis tag="wght" stylevalue="500"/>
         </font>
-        <font weight="600" style="italic">Roboto-Regular.ttf
-          <axis tag="ital" stylevalue="1" />
-          <axis tag="wdth" stylevalue="100" />
-          <axis tag="wght" stylevalue="600" />
+        <font weight="600" style="italic">GoogleSans-Italic.ttf
+            <axis tag="GRAD" stylevalue="0"/>
+            <axis tag="opsz" stylevalue="18.0"/>
+            <axis tag="wght" stylevalue="600"/>
         </font>
-        <font weight="700" style="italic">Roboto-Regular.ttf
-          <axis tag="ital" stylevalue="1" />
-          <axis tag="wdth" stylevalue="100" />
-          <axis tag="wght" stylevalue="700" />
+        <font weight="700" style="italic">GoogleSans-Italic.ttf
+            <axis tag="GRAD" stylevalue="0"/>
+            <axis tag="opsz" stylevalue="18.0"/>
+            <axis tag="wght" stylevalue="700"/>
         </font>
+
         <font weight="800" style="italic">Roboto-Regular.ttf
           <axis tag="ital" stylevalue="1" />
           <axis tag="wdth" stylevalue="100" />
