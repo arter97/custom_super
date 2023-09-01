@@ -33,6 +33,27 @@ user::rwx
 group::r-x
 other::r-x
 
+# file: system/system/bin/make_f2fs
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/bin/fsck.f2fs
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/bin/sload_f2fs
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
 # file: system/system/etc
 # owner: 0
 # group: 0
@@ -48,6 +69,20 @@ group::r-x
 other::r-x
 
 # file: system/system/etc/init/rdnsd.rc
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/etc/init/hw
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/etc/init/hw/init.zygote64.rc
 # owner: 0
 # group: 0
 user::rw-
@@ -76,6 +111,13 @@ group::r--
 other::r--
 
 # file: system/system/etc/permissions/privapp-permissions-org.skvalex.cr.xml
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/etc/fonts.xml
 # owner: 0
 # group: 0
 user::rw-
@@ -229,6 +271,83 @@ user::rw-
 group::r--
 other::r--
 
+# file: system/system/fonts
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/fonts/GoogleSans-Italic.ttf
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/fonts/GoogleSans-Regular.ttf
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: product
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: product/app
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: product/app/Chrome64
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: product/app/Chrome64/Chrome64.apk
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: product/app/TrichromeLibrary64
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: product/app/TrichromeLibrary64/TrichromeLibrary64.apk
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: product/app/WebViewGoogle64
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: product/app/WebViewGoogle64/WebViewGoogle64.apk
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
 # file: vendor
 # owner: 0
 # group: 2000
@@ -236,21 +355,21 @@ user::rwx
 group::r-x
 other::r-x
 
-# file: vendor/lib
+# file: vendor/lib64
 # owner: 0
 # group: 0
 user::rwx
 group::r-x
 other::r-x
 
-# file: vendor/lib/soundfx
+# file: vendor/lib64/soundfx
 # owner: 0
 # group: 0
 user::rwx
 group::r-x
 other::r-x
 
-# file: vendor/lib/soundfx/libv4a_fx.so
+# file: vendor/lib64/soundfx/libv4a_re.so
 # owner: 0
 # group: 0
 user::rw-
@@ -265,34 +384,6 @@ group::r-x
 other::r-x
 
 # file: vendor/etc/fstab.qcom
-# owner: 0
-# group: 0
-user::rw-
-group::r--
-other::r--
-
-# file: vendor/etc/audio
-# owner: 0
-# group: 0
-user::rwx
-group::r-x
-other::r-x
-
-# file: vendor/etc/audio/sku_cape
-# owner: 0
-# group: 0
-user::rwx
-group::r-x
-other::r-x
-
-# file: vendor/etc/audio/sku_cape/audio_effects.conf
-# owner: 0
-# group: 0
-user::rw-
-group::r--
-other::r--
-
-# file: vendor/etc/audio/sku_cape/audio_effects.xml
 # owner: 0
 # group: 0
 user::rw-

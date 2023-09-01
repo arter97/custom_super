@@ -22,6 +22,9 @@ security.selinux="u:object_r:system_file:s0"
 # file: system/system/etc/init/rdnsd.rc
 security.selinux="u:object_r:system_file:s0"
 
+# file: system/system/etc/init/hw/init.zygote64.rc
+security.selinux="u:object_r:system_file:s0"
+
 # file: system/system/etc/permissions
 security.selinux="u:object_r:system_file:s0"
 
@@ -97,33 +100,39 @@ security.selinux="u:object_r:system_file:s0"
 # file: system/system/priv-app/CallRecorderSKVALEXAddOn/CallRecorderSKVALEXAddOn.apk
 security.selinux="u:object_r:system_file:s0"
 
+# file: system/system/fonts/GoogleSans-Italic.ttf
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/fonts/GoogleSans-Regular.ttf
+security.selinux="u:object_r:system_file:s0"
+
+# file: product/app/Chrome64
+security.selinux="u:object_r:system_file:s0"
+
+# file: product/app/Chrome64/Chrome64.apk
+security.selinux="u:object_r:system_file:s0"
+
+# file: product/app/TrichromeLibrary64
+security.selinux="u:object_r:system_file:s0"
+
+# file: product/app/TrichromeLibrary64/TrichromeLibrary64.apk
+security.selinux="u:object_r:system_file:s0"
+
+# file: product/app/WebViewGoogle64
+security.selinux="u:object_r:system_file:s0"
+
+# file: product/app/WebViewGoogle64/WebViewGoogle64.apk
+security.selinux="u:object_r:system_file:s0"
+
 # file: vendor
 security.selinux="u:object_r:vendor_file:s0"
 
-# file: vendor/lib
-security.selinux="u:object_r:vendor_file:s0"
-
-# file: vendor/lib/soundfx
-security.selinux="u:object_r:vendor_file:s0"
-
-# file: vendor/lib/soundfx/libv4a_fx.so
+# file: vendor/lib64/soundfx/libv4a_re.so
 security.selinux="u:object_r:vendor_file:s0"
 
 # file: vendor/etc
 security.selinux="u:object_r:vendor_configs_file:s0"
 
 # file: vendor/etc/fstab.qcom
-security.selinux="u:object_r:vendor_configs_file:s0"
-
-# file: vendor/etc/audio
-security.selinux="u:object_r:vendor_configs_file:s0"
-
-# file: vendor/etc/audio/sku_cape
-security.selinux="u:object_r:vendor_configs_file:s0"
-
-# file: vendor/etc/audio/sku_cape/audio_effects.conf
-security.selinux="u:object_r:vendor_configs_file:s0"
-
-# file: vendor/etc/audio/sku_cape/audio_effects.xml
 security.selinux="u:object_r:vendor_configs_file:s0"
 
