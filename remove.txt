@@ -10,3 +10,11 @@ product/framework/oat/arm
 product/app/Chrome
 product/app/TrichromeLibrary
 product/app/WebViewGoogle
+
+# Debloat
+product/app/Drive
+product/app/Keep
+product/app/Meet
+product/app/YTMusic
+product/app/YouTube
+product/app/Videos
