@@ -1,0 +1,2 @@
+# Force SELinux recompile
+system/system/etc/selinux/plat_sepolicy_and_mapping.sha256

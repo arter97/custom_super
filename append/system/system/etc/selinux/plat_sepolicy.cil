@@ -1,0 +1,2 @@
+(genfscon proc "/sys/vm/dirty_background_bytes" (u object_r proc_dirty ((s0) (s0))))
+(genfscon proc "/sys/vm/dirty_bytes" (u object_r proc_dirty ((s0) (s0))))
