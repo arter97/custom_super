@@ -1,0 +1,35 @@
+#!/bin/bash
+
+set -eo pipefail
+
+TMP=/tmp/$(uuidgen)
+
+echo "Patching for viper"
+
+cd out/
+for FILE in vendor/etc/audio/sku_cape/audio_effects.conf vendor/etc/audio/sku_cape/audio_effects.xml; do
+  case $FILE in
+    *.conf)
+        sed \
+          -e "/v4a_standard_re {/,/}/d" \
+          -e "/v4a_re {/,/}/d" \
+          -e "s/^effects {/effects {\n  v4a_standard_re {\n    library v4a_re\n    uuid 90380da3-8536-4744-a6a3-5731970e640f\n  }/g" \
+          -e "s/^libraries {/libraries {\n  v4a_re {\n    path \/vendor\/lib\/soundfx\/libv4a_re.so\n  }/g" \
+          $FILE > $TMP
+        colordiff $FILE $TMP || true
+        cat $TMP > $FILE
+        ;;
+    *.xml)
+        sed \
+          -e "/v4a_standard_re/d" \
+          -e "/v4a_re/d" \
+          -e "/<libraries>/ a\        <library name=\"v4a_re\" path=\"libv4a_re.so\"\/>" \
+          -e "/<effects>/ a\        <effect name=\"v4a_standard_re\" library=\"v4a_re\" uuid=\"90380da3-8536-4744-a6a3-5731970e640f\"\/>" \
+          $FILE > $TMP
+        colordiff $FILE $TMP || true
+        cat $TMP > $FILE
+        ;;
+  esac
+done
+cd ..
+rm $TMP
