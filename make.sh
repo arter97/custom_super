@@ -75,9 +75,11 @@ for i in $MOD; do
   mount -t ext4 out/$i.img out/$i
 
   echo "Copying $i data"
-  if cat remove.txt | grep -q "^$i/"; then
-    cat remove.txt | grep "^$i/" | cut -c$((${#i} + 2))- > $TMP
+  if grep -o '^[^#]*' remove.txt | grep -q "^$i/"; then
+    TMP=/tmp/custom-super-$(uuidgen)
+    grep -o '^[^#]*' remove.txt | grep "^$i/" | cut -c$((${#i} + 2))- > $TMP
     rsync -ahAXx --exclude-from $TMP --inplace --numeric-ids orig/$i/ out/$i/
+    rm $TMP
   else
     rsync -ahAXx --inplace --numeric-ids orig/$i/ out/$i/
   fi
