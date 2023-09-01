@@ -1,0 +1,301 @@
+# file: .
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/bin
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::--x
+
+# file: system/system/bin/busybox
+# owner: 0
+# group: 2000
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/etc
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/etc/init
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/etc/init/rdnsd.rc
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/etc/permissions
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/etc/permissions/com.oasisfeng.greenify.xml
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/etc/permissions/privapp-permissions-org.skvalex.cr.root.xml
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/etc/permissions/privapp-permissions-org.skvalex.cr.xml
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/CallRecorderSKVALEX
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/CallRecorderSKVALEX/lib
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/libamrnb_dec.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/libamrnb_enc.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/libbugsnag-ndk.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/libbugsnag-plugin-android-anr.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/libbugsnag-root-detection.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/libflac_utils.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/liblame.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/libmp3dec.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/libmyaudioutils.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/libopus_utils.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorderSKVALEX/CallRecorderSKVALEX.apk
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/Greenify
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/Greenify/Greenify.apk
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/v4a
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/v4a/v4a.apk
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/CallRecorderSKVALEXAddOn
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/CallRecorderSKVALEXAddOn/CallRecorderSKVALEXAddOn.apk
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor
+# owner: 0
+# group: 2000
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor/lib
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor/lib/soundfx
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor/lib/soundfx/libv4a_fx.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/etc
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor/etc/fstab.qcom
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/etc/audio
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor/etc/audio/sku_cape
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor/etc/audio/sku_cape/audio_effects.conf
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/etc/audio/sku_cape/audio_effects.xml
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+

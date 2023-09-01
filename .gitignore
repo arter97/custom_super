@@ -1,0 +1,11 @@
+/root/
+/new/
+/out/
+*.tmp
+*.img
+*.raw
+.*
+
+!files/**
+!attr/*.txt
+!prebuilt/**
