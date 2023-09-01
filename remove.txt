@@ -1,2 +1,12 @@
 # Force SELinux recompile
 system/system/etc/selinux/plat_sepolicy_and_mapping.sha256
+
+# 64bo
+system/system/etc/init/hw/init.zygote64_32.rc
+system/system/framework/arm
+system/system/framework/oat/arm
+product/*app/*/oat/arm
+product/framework/oat/arm
+product/app/Chrome
+product/app/TrichromeLibrary
+product/app/WebViewGoogle
