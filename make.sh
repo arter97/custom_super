@@ -62,9 +62,19 @@ for i in $MOD; do
   mkdir -p orig/$i out/$i
   mount -t ext4 -o ro out/$i.img orig/$i
 
-  # Calculate size: original + new files + 10% + 1M, aligned to 1M
-  SIZE=$(( $(du -sb --apparent-size orig/$i files/$i | awk '{print $1}' | tr '\n' '+')0 ))
-  SIZE=$((((($SIZE * 110 / 100) + (1024 * 1024 - 1)) / (1024 * 1024) + 1) * (1024 * 1024)))
+  # Calculate size: original + new files + 1M, aligned to 1M
+  SIZE=$(( $( ( du -sb --apparent-size orig/$i files/$i 2>/dev/null || true ) | awk '{print $1}' | tr '\n' '+')0 ))
+  case "$i" in
+    "system")
+      MARGIN=120
+      ;;
+    "product")
+      MARGIN=80
+      ;;
+    *)
+      MARGIN=110
+  esac
+  SIZE=$((((($SIZE * $MARGIN / 100) + (1024 * 1024 - 1)) / (1024 * 1024) + 1) * (1024 * 1024)))
 
   rm out/$i.img
   fallocate -l $SIZE out/$i.img
