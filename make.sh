@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# TODO 64bit, init.rc, f2fs
-
 cleanup_lo() {
   ( ( losetup | grep "$STOCK_FIRMWARE" | awk '{print $1}' ) || true ) | while read l; do losetup -d $l; done
 }
