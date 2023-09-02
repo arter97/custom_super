@@ -75,13 +75,6 @@ user::rwx
 group::r-x
 other::r-x
 
-# file: system/system/etc/init/rdnsd.rc
-# owner: 0
-# group: 0
-user::rw-
-group::r--
-other::r--
-
 # file: system/system/etc/init/hw
 # owner: 0
 # group: 0
