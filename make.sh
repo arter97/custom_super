@@ -21,6 +21,13 @@ ALIGN=$((4 * 1024 * 1024)) # 4 MiB
 
 SUPER_SIZE=7516192768
 
+ODM_SIZE=8
+PRODUCT_SIZE=2048
+SYSTEM_EXT_SIZE=700
+SYSTEM_SIZE=1536
+VENDOR_DLKM_SIZE=96
+VENDOR_SIZE=2700
+
 ACTIVE_SLOT=a
 INACTIVE_SLOT=b
 
@@ -60,19 +67,8 @@ for i in $MOD; do
   mkdir -p orig/$i out/$i
   mount -t ext4 -o ro out/$i.img orig/$i
 
-  # Calculate size: original + new files + 1M, aligned to 1M
-  SIZE=$(( $( ( du -sb --apparent-size orig/$i files/$i 2>/dev/null || true ) | awk '{print $1}' | tr '\n' '+')0 ))
-  case "$i" in
-    "system")
-      MARGIN=120
-      ;;
-    "product")
-      MARGIN=80
-      ;;
-    *)
-      MARGIN=110
-  esac
-  SIZE=$((((($SIZE * $MARGIN / 100) + (1024 * 1024 - 1)) / (1024 * 1024) + 1) * (1024 * 1024)))
+  eval SIZE='$'$(echo $i | tr '[:lower:]' '[:upper:]')_SIZE
+  SIZE=$(($SIZE * 1024 * 1024))
 
   rm out/$i.img
   fallocate -l $SIZE out/$i.img
@@ -129,11 +125,8 @@ echo "Creating super.img"
 ARG=""
 while read img; do
   PART_NAME=$(echo $img | sed 's/\.img//g')
-  if [ -b out/$img ]; then
-    SIZE=$(blockdev --getsize64 out/$img)
-  else
-    SIZE=$(stat -L -c%s out/$img)
-  fi
+  eval SIZE='$'$(echo $PART_NAME | tr '[:lower:]' '[:upper:]')_SIZE
+  SIZE=$(($SIZE * 1024 * 1024))
   ARG="$ARG -p ${PART_NAME}_${INACTIVE_SLOT}:none:0:qti_dynamic_partitions_${INACTIVE_SLOT}"
   ARG="$ARG -p ${PART_NAME}_${ACTIVE_SLOT}:none:${SIZE}:qti_dynamic_partitions_${ACTIVE_SLOT} -i ${PART_NAME}_${ACTIVE_SLOT}=out/$img"
 done < <(ls out/ | grep '\.img$')
