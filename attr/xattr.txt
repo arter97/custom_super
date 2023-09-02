@@ -10,9 +10,6 @@ security.selinux="u:object_r:system_file:s0"
 # file: system/system/bin
 security.selinux="u:object_r:system_file:s0"
 
-# file: system/system/bin/busybox
-security.selinux="u:object_r:system_file:s0"
-
 # file: system/system/etc
 security.selinux="u:object_r:system_file:s0"
 
@@ -22,86 +19,11 @@ security.selinux="u:object_r:system_file:s0"
 # file: system/system/etc/init/hw/init.zygote64.rc
 security.selinux="u:object_r:system_file:s0"
 
-# file: system/system/etc/permissions
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/etc/permissions/com.oasisfeng.greenify.xml
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/etc/permissions/privapp-permissions-org.skvalex.cr.root.xml
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/etc/permissions/privapp-permissions-org.skvalex.cr.xml
-security.selinux="u:object_r:system_file:s0"
-
 # file: system/system/etc/seccomp_policy
 security.selinux="u:object_r:system_seccomp_policy_file:s0"
 
 # file: system/system/etc/seccomp_policy/mediacodec.policy
 security.selinux="u:object_r:system_seccomp_policy_file:s0"
-
-# file: system/system/priv-app
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/CallRecorderSKVALEX
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/CallRecorderSKVALEX/lib
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/libamrnb_dec.so
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/libamrnb_enc.so
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/libbugsnag-ndk.so
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/libbugsnag-plugin-android-anr.so
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/libbugsnag-root-detection.so
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/libflac_utils.so
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/liblame.so
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/libmp3dec.so
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/libmyaudioutils.so
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/CallRecorderSKVALEX/lib/arm64/libopus_utils.so
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/CallRecorderSKVALEX/CallRecorderSKVALEX.apk
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/Greenify
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/Greenify/Greenify.apk
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/v4a
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/v4a/v4a.apk
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/CallRecorderSKVALEXAddOn
-security.selinux="u:object_r:system_file:s0"
-
-# file: system/system/priv-app/CallRecorderSKVALEXAddOn/CallRecorderSKVALEXAddOn.apk
-security.selinux="u:object_r:system_file:s0"
 
 # file: system/system/fonts/GoogleSans-Italic.ttf
 security.selinux="u:object_r:system_file:s0"
@@ -128,12 +50,6 @@ security.selinux="u:object_r:system_file:s0"
 security.selinux="u:object_r:system_file:s0"
 
 # file: vendor
-security.selinux="u:object_r:vendor_file:s0"
-
-# file: vendor/lib64/soundfx
-security.selinux="u:object_r:vendor_file:s0"
-
-# file: vendor/lib64/soundfx/libv4a_re.so
 security.selinux="u:object_r:vendor_file:s0"
 
 # file: vendor/lib64/android.hardware.cas@1.0.so
@@ -234,10 +150,4 @@ security.selinux="u:object_r:vendor_file:s0"
 
 # file: vendor/lib64/libvpx.so
 security.selinux="u:object_r:vendor_file:s0"
-
-# file: vendor/etc
-security.selinux="u:object_r:vendor_configs_file:s0"
-
-# file: vendor/etc/fstab.qcom
-security.selinux="u:object_r:vendor_configs_file:s0"
 
