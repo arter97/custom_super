@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -eo pipefail
+
+VERSION="-arter97-r1a1"
+
+TMP=/tmp/$(uuidgen)
+
+sed -e "/ro.nothing.version.id=/ s/\$/${VERSION}/" out/system/system/build.prop > $TMP
+cat $TMP > out/system/system/build.prop
+rm $TMP
