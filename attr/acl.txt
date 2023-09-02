@@ -40,6 +40,13 @@ user::rwx
 group::r-x
 other::r-x
 
+# file: system/system/bin/drmserver
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
 # file: system/system/bin/fsck.f2fs
 # owner: 0
 # group: 0
@@ -118,6 +125,20 @@ group::r--
 other::r--
 
 # file: system/system/etc/fonts.xml
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/etc/seccomp_policy
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/etc/seccomp_policy/mediacodec.policy
 # owner: 0
 # group: 0
 user::rw-
@@ -376,6 +397,237 @@ user::rw-
 group::r--
 other::r--
 
+# file: vendor/lib64/android.hardware.cas@1.0.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/android.hardware.cas@1.1.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/android.hardware.cas@1.2.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/android.hardware.cas.native@1.0.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libopus.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_amrnb_common.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_enc_common.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_flacdec.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_aacdec.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_aacenc.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_amrdec.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_amrnbenc.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_amrwbenc.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_avcdec.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_avcenc.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_flacdec.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_flacenc.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_g711dec.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_gsmdec.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_hevcdec.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_mp3dec.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_mpeg2dec.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_mpeg4dec.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_mpeg4enc.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_softomx_plugin.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_softomx.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_opusdec.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_rawdec.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_vorbisdec.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_vpxdec.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libstagefright_soft_vpxenc.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libvorbisidec.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libvpx.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
 # file: vendor/etc
 # owner: 0
 # group: 0
@@ -389,4 +641,32 @@ other::r-x
 user::rw-
 group::r--
 other::r--
+
+# file: vendor/bin
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor/bin/hw
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor/bin/hw/android.hardware.cas@1.2-service
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor/bin/hw/android.hardware.media.omx@1.0-service
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
 
