@@ -41,6 +41,7 @@
     <string-array name="config_disableApksUnlessMatchedSku_apk_list" translatable="false">
         <item>com.nothing.OfflineOTAUpgradeApp</item>
         <item>com.nothing.logkit</item>
+        <item>com.nothing.bpf</item>
         <item>com.tools.cit</item>
     </string-array>
 
