@@ -151,3 +151,9 @@ security.selinux="u:object_r:vendor_file:s0"
 # file: vendor/lib64/libvpx.so
 security.selinux="u:object_r:vendor_file:s0"
 
+# file: vendor/etc
+security.selinux="u:object_r:vendor_configs_file:s0"
+
+# file: vendor/etc/fstab.qcom
+security.selinux="u:object_r:vendor_configs_file:s0"
+
