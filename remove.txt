@@ -18,3 +18,7 @@ product/app/Meet
 product/app/YTMusic
 product/app/YouTube
 product/app/Videos
+
+# Fix DRM to L3
+vendor/lib/liboemcrypto.so
+vendor/lib64/liboemcrypto.so
