@@ -10,6 +10,11 @@ cleanup() {
   cleanup_lo
 }
 
+drop_caches() {
+  sync
+  echo 3 > /proc/sys/vm/drop_caches
+}
+
 set -eo pipefail
 
 if [ "$EUID" -ne 0 ]; then
@@ -87,6 +92,23 @@ for i in $MOD; do
   else
     rsync -ahAXx --inplace --numeric-ids orig/$i/ out/$i/
   fi
+done
+
+# Check checksum
+echo "Checking checksum"
+drop_caches
+for i in $MOD; do
+  cd out/$i/
+  find -type f | parallel -X xxh64sum | sort -k2 -V > ../$i.hash &
+  find -type f | ( cd ../../orig/$i; parallel -X xxh64sum | sort -k2 -V > ../../orig/$i.hash ) &
+  cd ../..
+  wait
+  if ! cmp -s orig/$i.hash out/$i.hash; then
+    bold "File corruption detected: $i" 1>&2
+    colordiff orig/$i.hash out/$i.hash 1>&2
+    exit 1
+  fi
+  rm orig/$i.hash out/$i.hash
 done
 
 echo "Adding files"
