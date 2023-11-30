@@ -10,6 +10,9 @@ security.selinux="u:object_r:system_file:s0"
 # file: system/system/bin
 security.selinux="u:object_r:system_file:s0"
 
+# file: system/system/bin/lmkd
+security.selinux="u:object_r:lmkd_exec:s0"
+
 # file: system/system/etc
 security.selinux="u:object_r:system_file:s0"
 
