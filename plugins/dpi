@@ -3,6 +3,10 @@
 set -eo pipefail
 
 TMP=/tmp/$(uuidgen)
-sed -e 's@ro.sf.lcd_density=.*@ro.sf.lcd_density=360@g' out/product/etc/build.prop > $TMP
+
+cp out/product/etc/build.prop $TMP
+sed -i -e '/ro.sf.lcd_density=/d' $TMP
+echo "" >> $TMP
+echo "ro.sf.lcd_density=360" >> $TMP
 cat $TMP > out/product/etc/build.prop
 rm $TMP
