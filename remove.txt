@@ -25,6 +25,3 @@ vendor/lib64/liboemcrypto.so
 
 # Dirac
 system/system/priv-app/*Dirac*
-
-# CompanionDeviceManager
-system/system/app/CompanionDeviceManager

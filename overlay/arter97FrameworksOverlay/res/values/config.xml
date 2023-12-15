@@ -39,7 +39,6 @@
     <integer name="config_longPressOnPowerBehavior">1</integer>
 
     <string-array name="config_disableApksUnlessMatchedSku_apk_list" translatable="false">
-        <item>com.android.companiondevicemanager</item>
         <item>com.nothing.OfflineOTAUpgradeApp</item>
         <item>com.nothing.logkit</item>
         <item>com.nothing.bpf</item>
