@@ -1,7 +1,6 @@
 /root/
 /new/
 /out/
-*.hash
 *.tmp
 *.img
 *.raw
