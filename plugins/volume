@@ -3,3 +3,4 @@
 set -eo pipefail
 
 echo "ro.config.media_vol_steps=30" >> out/system/system/build.prop
+echo "audio.safemedia.bypass=true" >> out/system/system/build.prop
