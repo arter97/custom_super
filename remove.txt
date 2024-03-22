@@ -25,3 +25,15 @@ vendor/lib64/liboemcrypto.so
 
 # Dirac
 system/system/priv-app/*Dirac*
+
+# Custom bionic
+system/system/lib/libc.so
+system/system/lib64/libc.so
+system/system/lib64/hwasan/libc.so
+system/system/lib/libm.so
+system/system/lib64/libm.so
+system/system/lib/bootstrap/libc.so
+system/system/lib64/bootstrap/libc.so
+system/system/lib64/bootstrap/hwasan/libc.so
+system/system/lib/bootstrap/libm.so
+system/system/lib64/bootstrap/libm.so

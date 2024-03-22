@@ -131,6 +131,83 @@ user::rw-
 group::r--
 other::r--
 
+# file: system/system/lib
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/lib/bootstrap
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/lib/libc.so
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/lib/libm.so
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/lib64
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/lib64/hwasan
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/lib64/hwasan/libc.so
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/lib64/bootstrap
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/lib64/bootstrap/hwasan
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/lib64/libm.so
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/lib64/libc.so
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
 # file: product
 # owner: 0
 # group: 0
