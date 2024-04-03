@@ -202,3 +202,66 @@ security.selinux="u:object_r:vendor_file:s0"
 # file: vendor/lib64/libvpx.so
 security.selinux="u:object_r:vendor_file:s0"
 
+# file: vendor/lib64/egl
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/egl/eglSubDriverAndroid.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/egl/libEGL_adreno.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/egl/libGLESv1_CM_adreno.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/egl/libGLESv2_adreno.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/egl/libq3dtools_adreno.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/egl/libq3dtools_esx.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/hw
+security.selinux="u:object_r:vendor_hal_file:s0"
+
+# file: vendor/lib64/hw/vulkan.adreno.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/libCB.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/libOpenCL.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/libadreno_app_profiles.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/libadreno_utils.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/libgpudataproducer.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/libgsl.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/libkcl.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/libkernelmanager.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/libllvm-glnext.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/libllvm-qcom.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+
+# file: vendor/lib64/libllvm-qgl.so
+security.selinux="u:object_r:same_process_hal_file:s0"
+

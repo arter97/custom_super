@@ -537,3 +537,150 @@ user::rwx
 group::r-x
 other::r-x
 
+# file: vendor/lib64/egl
+# owner: 0
+# group: 2000
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor/lib64/egl/eglSubDriverAndroid.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/egl/libEGL_adreno.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/egl/libGLESv1_CM_adreno.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/egl/libGLESv2_adreno.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/egl/libq3dtools_adreno.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/egl/libq3dtools_esx.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/hw
+# owner: 0
+# group: 2000
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor/lib64/hw/vulkan.adreno.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libCB.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libOpenCL.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libadreno_app_profiles.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libadreno_utils.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libgpudataproducer.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libgsl.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libkcl.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libkernelmanager.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libllvm-glnext.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libllvm-qcom.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64/libllvm-qgl.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
