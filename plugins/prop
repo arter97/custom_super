@@ -22,3 +22,6 @@ rm $TMP
 # Volume
 echo "ro.config.media_vol_steps=30" >> out/system/system/build.prop
 echo "audio.safemedia.bypass=true" >> out/system/system/build.prop
+
+# Disable logd to forward kernel logs to logcat
+echo "ro.logd.kernel=false" >> out/system/system/build.prop
