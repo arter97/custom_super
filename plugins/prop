@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -eo pipefail
+
+VERSION="-arter97-r10b1"
+
+TMP=/tmp/$(uuidgen)
+
+# Version
+sed -e "/ro.nothing.version.id=/ s/\$/${VERSION}/" out/system/system/build.prop > $TMP
+cat $TMP > out/system/system/build.prop
+rm $TMP
+
+# DPI
+cp out/product/etc/build.prop $TMP
+sed -i -e '/ro.sf.lcd_density=/d' $TMP
+echo "" >> $TMP
+echo "ro.sf.lcd_density=360" >> $TMP
+cat $TMP > out/product/etc/build.prop
+rm $TMP
+
+# Volume
+echo "ro.config.media_vol_steps=30" >> out/system/system/build.prop
+echo "audio.safemedia.bypass=true" >> out/system/system/build.prop
