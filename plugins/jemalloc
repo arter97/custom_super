@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -eo pipefail
+
+for f in out/system/system/etc/init/cameraserver.rc out/vendor/etc/init/android.hardware.biometrics.face-service.noth.rc; do
+  echo "    setenv JE_MALLOC_ZERO_FILLING 1" >> $f
+  batcat $f
+done
