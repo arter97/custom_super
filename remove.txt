@@ -37,3 +37,10 @@ system/system/lib64/bootstrap/libm.so
 
 # zramwriteback
 vendor/*zramwriteback*
+
+# Debug
+system_ext/etc/init/init.qti.bt.logger.rc
+system_ext/etc/init/nt_bpf.rc
+system_ext/etc/init/nt_core.rc
+system_ext/etc/init/nt_logkit.rc
+vendor/etc/init/nt_minidump_extractor.rc
