@@ -140,12 +140,11 @@ lpmake \
     --alignment-offset=$ALIGN \
     --super-name=super \
     --virtual-ab \
-    --sparse \
-    -o out/super.img \
+    -o out/super.raw \
     -g qti_dynamic_partitions_${INACTIVE_SLOT}:$(($SUPER_SIZE - $ALIGN)) \
     -g qti_dynamic_partitions_${ACTIVE_SLOT}:$(($SUPER_SIZE - $ALIGN)) \
     $ARG
 set +x
 cleanup_lo
 
-ls -al out/super.img
+ls -al out/super.raw
