@@ -34,3 +34,6 @@ system/system/lib64/bootstrap/libc.so
 system/system/lib64/bootstrap/hwasan/libc.so
 system/system/lib/bootstrap/libm.so
 system/system/lib64/bootstrap/libm.so
+
+# zramwriteback
+vendor/*zramwriteback*
