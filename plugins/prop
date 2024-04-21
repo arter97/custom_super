@@ -2,7 +2,7 @@
 
 set -eo pipefail
 
-VERSION="-arter97-r11"
+VERSION="-arter97-r12"
 
 TMP=/tmp/$(uuidgen)
 
