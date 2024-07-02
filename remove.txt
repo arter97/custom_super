@@ -23,9 +23,6 @@ product/app/Videos
 vendor/lib/liboemcrypto.so
 vendor/lib64/liboemcrypto.so
 
-# Dirac
-system/system/priv-app/*Dirac*
-
 # Custom bionic
 system/system/lib/libc.so
 system/system/lib64/libc.so
