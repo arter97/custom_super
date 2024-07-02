@@ -23,5 +23,11 @@ rm $TMP
 echo "ro.config.media_vol_steps=30" >> out/system/system/build.prop
 echo "audio.safemedia.bypass=true" >> out/system/system/build.prop
 
+# Fix Dirac from ro.config.media_vol_steps=30
+sed -e 's@"max": 16@"max": 30@g' -e 's@"default": 10,@"default": 28,@g' out/vendor/etc/dirac/interface.json > $TMP
+colordiff -Naur out/vendor/etc/dirac/interface.json $TMP || true
+cat $TMP > out/vendor/etc/dirac/interface.json
+rm $TMP
+
 # Disable logd to forward kernel logs to logcat
 echo "ro.logd.kernel=false" >> out/system/system/build.prop
