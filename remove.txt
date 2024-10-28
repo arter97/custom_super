@@ -13,11 +13,14 @@ product/app/WebViewGoogle
 
 # Debloat
 product/app/Drive
+product/app/Gmail2
 product/app/Keep
+product/app/Maps
 product/app/Meet
-product/app/YTMusic
-product/app/YouTube
+product/app/Photos
 product/app/Videos
+product/app/YouTube
+product/app/YTMusic
 
 # Fix DRM to L3
 vendor/lib/liboemcrypto.so
