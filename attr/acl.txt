@@ -89,6 +89,13 @@ user::rw-
 group::r--
 other::r--
 
+# file: system/system/etc/font_fallback.xml
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
 # file: system/system/etc/fonts.xml
 # owner: 0
 # group: 0

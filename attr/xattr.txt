@@ -16,6 +16,12 @@ security.selinux="u:object_r:lmkd_exec:s0"
 # file: system/system/etc
 security.selinux="u:object_r:system_file:s0"
 
+# file: system/system/etc/font_fallback.xml
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/etc/fonts.xml
+security.selinux="u:object_r:system_file:s0"
+
 # file: system/system/etc/init
 security.selinux="u:object_r:system_file:s0"
 
