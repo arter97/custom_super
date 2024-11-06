@@ -65,7 +65,7 @@ done
 for i in $MOD; do
   echo "Creating $i.img"
   mkdir -p orig/$i out/$i
-  mount -t ext4 -o ro out/$i.img orig/$i
+  mount -o ro out/$i.img orig/$i
 
   eval SIZE='$'$(echo $i | tr '[:lower:]' '[:upper:]')_SIZE
   SIZE=$(($SIZE * 1024 * 1024))
