@@ -31,3 +31,9 @@ rm $TMP
 
 # Disable logd to forward kernel logs to logcat
 echo "ro.logd.kernel=false" >> out/system/system/build.prop
+
+# Disable LayerExt
+cp out/vendor/build.prop $TMP
+sed -i -e '/vendor.display.use_layer_ext/d' $TMP
+cat $TMP > out/vendor/build.prop
+rm $TMP
