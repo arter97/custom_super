@@ -110,12 +110,6 @@
             <Limit name="measured-frame-rate-720x480" range="102-228" />
             <Limit name="measured-frame-rate-1280x720" range="52-116" />
         </MediaCodec>
-        <MediaCodec name="c2.android.av1-dav1d.decoder" type="video/av01" update="true">
-            <Limit name="measured-frame-rate-352x288" range="1411-1554" />
-            <Limit name="measured-frame-rate-640x360" range="1012-1086" />
-            <Limit name="measured-frame-rate-720x480" range="792-833" />
-            <Limit name="measured-frame-rate-1280x720" range="200-220" />
-        </MediaCodec>
         <MediaCodec name="c2.android.h263.decoder" type="video/3gpp" update="true">
             <!-- measured 98%:151-1143 med:437/432 FLAKY(111 - 972 < mx=1146.8) variance:2.8 -->
             <Limit name="measured-frame-rate-176x144" range="800-2600" /> <!-- N=270 -->
@@ -130,20 +124,20 @@
     <Encoders>
         <!-- C2 HW encoders -->
         <MediaCodec name="c2.qti.avc.encoder" type="video/avc" update="true">
-            <Limit name="measured-frame-rate-320x240" range="212-868" />
+            <Limit name="measured-frame-rate-320x240" range="1150-1400" />
             <Limit name="measured-frame-rate-720x480" range="110-240" />
             <Limit name="measured-frame-rate-1280x720" range="320-380" />
             <Limit name="measured-frame-rate-1920x1080" range="35-80" />
         </MediaCodec>
         <MediaCodec name="c2.qti.hevc.encoder" type="video/hevc" update="true">
-            <Limit name="measured-frame-rate-320x240" range="197-1037" />
+            <Limit name="measured-frame-rate-320x240" range="480-1400" />
             <Limit name="measured-frame-rate-720x480" range="165-210" />
             <Limit name="measured-frame-rate-1280x720" range="133-184" />
             <Limit name="measured-frame-rate-1920x1080" range="84-131" />
             <Limit name="measured-frame-rate-3840x2160" range="31-44" />
         </MediaCodec>
         <MediaCodec name="c2.qti.hevc.encoder.cq" type="video/hevc" update="true">
-            <Limit name="measured-frame-rate-320x240" range="213-1020" />
+            <Limit name="measured-frame-rate-320x240" range="850-1020" />
         </MediaCodec>
 
         <!-- C2 SW encoders -->
