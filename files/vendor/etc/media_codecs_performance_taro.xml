@@ -109,7 +109,7 @@
             <Limit name="measured-frame-rate-720x480" range="102-228" />
             <Limit name="measured-frame-rate-1280x720" range="52-116" />
             <Limit name="measured-frame-rate-1920x1080" range="20-30" />
-        </MediaCodec>
+		</MediaCodec>
         <MediaCodec name="c2.android.h263.decoder" type="video/3gpp" update="true">
             <!-- measured 98%:151-1143 med:437/432 FLAKY(111 - 972 < mx=1146.8) variance:2.8 -->
             <Limit name="measured-frame-rate-176x144" range="890-2150" /> <!-- N=270 -->
