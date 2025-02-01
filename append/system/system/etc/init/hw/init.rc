@@ -2,6 +2,23 @@
 on property:sys.boot_completed=1
     write /proc/sys/vm/dirty_background_bytes 52428800
     write /proc/sys/vm/dirty_bytes 209715200
+    chown root root /dev/cpuset/audio-app/cpus
+    chown root root /dev/cpuset/background/cpus
+    chown root root /dev/cpuset/camera-daemon/cpus
+    chown root root /dev/cpuset/dex2oat/cpus
+    chown root root /dev/cpuset/foreground/cpus
+    chown root root /dev/cpuset/restricted/cpus
+    chown root root /dev/cpuset/system-background/cpus
+    chown root root /dev/cpuset/top-app/cpus
+    write /dev/cpuset/audio-app/cpus 1-2
+    write /dev/cpuset/background/cpus 0-3
+    write /dev/cpuset/camera-daemon/cpus 0-7
+    write /dev/cpuset/dex2oat/cpus 0-6
+    write /dev/cpuset/foreground/cpus 0-6
+    write /dev/cpuset/ntcam-algo/cpus 0-7
+    write /dev/cpuset/restricted/cpus 0-3
+    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/top-app/cpus 0-7
 
 on property:bootreceiver.enable=1
     setprop bootreceiver.enable 0
