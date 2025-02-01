@@ -32,6 +32,12 @@ colordiff -Naur out/vendor/etc/dirac/interface.json $TMP || true
 cat $TMP > out/vendor/etc/dirac/interface.json
 rm $TMP
 
+# Disable vendor.display.enable_perf_hint_large_comp_cycle
+sed -e 's@vendor.display.enable_perf_hint_large_comp_cycle 1@vendor.display.enable_perf_hint_large_comp_cycle 0@g' out/vendor/bin/init.qti.display_boot.sh > $TMP
+colordiff -Naur out/vendor/bin/init.qti.display_boot.sh $TMP || true
+cat $TMP > out/vendor/bin/init.qti.display_boot.sh
+rm $TMP
+
 # Disable logd to forward kernel logs to logcat
 echo "ro.logd.kernel=false" >> out/system/system/build.prop
 
