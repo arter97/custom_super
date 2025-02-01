@@ -47,6 +47,7 @@ system_ext/etc/init/nt_bpf.rc
 system_ext/etc/init/nt_core.rc
 system_ext/etc/init/nt_logkit.rc
 vendor/etc/init/nt_minidump_extractor.rc
+vendor/bin/cnss_diag
 
 # tui_comm
 vendor/lib64/libsecureui_svcsock.so
