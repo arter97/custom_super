@@ -7,7 +7,6 @@ on property:vendor.post_boot.parsed=1
     chown root root /dev/cpuset/camera-daemon/cpus
     chown root root /dev/cpuset/dex2oat/cpus
     chown root root /dev/cpuset/foreground/cpus
-    chown root root /dev/cpuset/restricted/cpus
     chown root root /dev/cpuset/system-background/cpus
     chown root root /dev/cpuset/top-app/cpus
     write /dev/cpuset/audio-app/cpus 1-2
@@ -16,7 +15,6 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuset/dex2oat/cpus 0-6
     write /dev/cpuset/foreground/cpus 0-6
     write /dev/cpuset/ntcam-algo/cpus 0-7
-    write /dev/cpuset/restricted/cpus 0-3
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/top-app/cpus 0-7
 
