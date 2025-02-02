@@ -56,3 +56,12 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
+
+# QSSI BSP
+system_ext/priv-app/aptxals/oat
+system_ext/app/QCC/oat
+system_ext/priv-app/com.qualcomm.location/oat
+system/system/framework/boot-QPerformance.*
+system/system/framework/arm64/boot-QPerformance.*
+system_ext/app/workloadclassifier/oat
+system_ext/priv-app/WfdService/oat
