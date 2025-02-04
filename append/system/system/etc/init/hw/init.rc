@@ -1,5 +1,5 @@
 
-on property:vendor.post_boot.parsed=1
+on property:sys.boot_completed=1
     write /proc/sys/vm/dirty_background_bytes 52428800
     write /proc/sys/vm/dirty_bytes 209715200
     chown root root /dev/cpuset/audio-app/cpus
@@ -17,14 +17,6 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuset/ntcam-algo/cpus 0-7
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/top-app/cpus 0-7
-
-    # CPUFreq
-    write /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us 20000
-    write /sys/devices/system/cpu/cpufreq/policy4/walt/up_rate_limit_us 1000
-    write /sys/devices/system/cpu/cpufreq/policy4/walt/down_rate_limit_us 10000
-    write /sys/devices/system/cpu/cpufreq/policy7/walt/up_rate_limit_us 2000
-    write /sys/devices/system/cpu/cpufreq/policy7/walt/down_rate_limit_us 5000
 
 on property:bootreceiver.enable=1
     setprop bootreceiver.enable 0
