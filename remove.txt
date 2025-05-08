@@ -10,6 +10,14 @@ product/framework/oat/arm
 product/app/Chrome
 product/app/TrichromeLibrary
 product/app/WebViewGoogle
+vendor/lib/*.so
+vendor/lib/camera
+vendor/lib/egl
+vendor/lib/hw
+vendor/lib/mediacas
+vendor/lib/mediadrm
+vendor/lib/soundfx
+vendor/lib/vndk
 
 # Debloat
 product/app/Drive
