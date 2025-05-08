@@ -5,8 +5,11 @@ system/system/etc/selinux/plat_sepolicy_and_mapping.sha256
 system/system/etc/init/hw/init.zygote64_32.rc
 system/system/framework/arm
 system/system/framework/oat/arm
+system_ext/framework/oat/arm
+system_ext/lib
 product/*app/*/oat/arm
 product/framework/oat/arm
+product/lib
 product/app/Chrome
 product/app/TrichromeLibrary
 product/app/WebViewGoogle
