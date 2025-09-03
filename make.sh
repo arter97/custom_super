@@ -63,22 +63,10 @@ for f in "$STOCK_FIRMWARE/"*.img; do
   ln -s $(losetup -f --show -b 4096 --sizelimit $(avb_get_orig_size "$f") "$f") out/$(basename $f)
 done
 for i in $MOD; do
-  echo "Creating $i.img"
   mkdir -p orig/$i out/$i
   mount -o ro out/$i.img orig/$i
 
-  eval SIZE='$'$(echo $i | tr '[:lower:]' '[:upper:]')_SIZE
-  SIZE=$(($SIZE * 1024 * 1024))
-
-  rm out/$i.img
-  fallocate -l $SIZE out/$i.img
-  $MKFS out/$i.img
-
-  echo $i: original size = $(du -sh --apparent-size "$STOCK_FIRMWARE/$i.img" | awk '{print $1}'), new size = $(du -sh --apparent-size "out/$i.img" | awk '{print $1}')
-
-  mount -t ext4 out/$i.img out/$i
-
-  echo "Copying $i data"
+ (
   if grep -o '^[^#]*' remove.txt | grep -q "^$i/"; then
     TMP=/tmp/custom-super-$(uuidgen)
     grep -o '^[^#]*' remove.txt | grep "^$i/" | cut -c$((${#i} + 2))- > $TMP
@@ -87,7 +75,11 @@ for i in $MOD; do
   else
     rsync -ahAXx --inplace --numeric-ids orig/$i/ out/$i/
   fi
+  echo "Copying $i done"
+ ) &
 done
+
+wait
 
 echo "Adding files"
 rsync -ahAX --inplace --numeric-ids files/ .files/
@@ -115,9 +107,25 @@ run-parts --exit-on-error -v plugins
 
 echo "Unmounting"
 for i in $MOD; do
-  umount "out/$i" &
   umount "orig/$i" &
 done
+
+wait
+
+echo "Creating images"
+for i in $MOD; do
+ (
+  eval SIZE='$'$(echo $i | tr '[:lower:]' '[:upper:]')_SIZE
+  SIZE=$(($SIZE * 1024 * 1024))
+
+  rm out/$i.img
+  fallocate -l $SIZE out/$i.img
+  $MKFS -L $i -d out/$i out/$i.img
+
+  echo Created $i: original size = $(du -sh --apparent-size "$STOCK_FIRMWARE/$i.img" | awk '{print $1}'), new size = $(du -sh --apparent-size "out/$i.img" | awk '{print $1}')
+ ) &
+done
+
 wait
 
 echo "Creating super.img"
