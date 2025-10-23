@@ -1,0 +1,2 @@
+(allow audioserver vendor_audio_prop (file (read getattr map open)))
+(allow audioserver unlabeled (file (read write getattr open)))

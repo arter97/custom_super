@@ -1,0 +1,12 @@
+/root/
+/new/
+/out/
+*.tmp
+*.img
+*.raw
+.*
+!.gitignore
+
+!files/**
+!attr/*.txt
+!prebuilt/**

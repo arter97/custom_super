@@ -1,0 +1,203 @@
+# file: .
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor/etc
+# owner: 0
+# group: 2000
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor/etc/fstab.qcom
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: vendor/lib64
+# owner: 0
+# group: 2000
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor/lib64/soundfx
+# owner: 0
+# group: 2000
+user::rwx
+group::r-x
+other::r-x
+
+# file: vendor/lib64/soundfx/libv4a_re.so
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/bin
+# owner: 0
+# group: 2000
+user::rwx
+group::r-x
+other::--x
+
+# file: system/system/bin/busybox
+# owner: 0
+# group: 2000
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/etc
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/etc/font_fallback.xml
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/etc/sysconfig
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/etc/sysconfig/config-com.chiller3.bcr.xml
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/etc/fonts.xml
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/etc/permissions
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/etc/permissions/com.oasisfeng.greenify.xml
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/etc/permissions/privapp-permissions-com.chiller3.bcr.xml
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/fonts
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/fonts/GoogleSans-Italic.ttf
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/fonts/GoogleSans-Regular.ttf
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/Greenify
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/Greenify/Greenify.apk
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/com.chiller3.bcr
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/com.chiller3.bcr/app-release.apk
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+
+# file: system/system/priv-app/v4a
+# owner: 0
+# group: 0
+user::rwx
+group::r-x
+other::r-x
+
+# file: system/system/priv-app/v4a/v4a.apk
+# owner: 0
+# group: 0
+user::rw-
+group::r--
+other::r--
+

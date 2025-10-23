@@ -1,0 +1,87 @@
+# file: .
+security.selinux="u:object_r:system_file:s0"
+
+# file: vendor
+security.selinux="u:object_r:vendor_file:s0"
+
+# file: vendor/etc
+security.selinux="u:object_r:vendor_configs_file:s0"
+
+# file: vendor/etc/fstab.qcom
+security.selinux="u:object_r:vendor_configs_file:s0"
+
+# file: vendor/lib64
+security.selinux="u:object_r:vendor_file:s0"
+
+# file: vendor/lib64/soundfx
+security.selinux="u:object_r:vendor_file:s0"
+
+# file: vendor/lib64/soundfx/libv4a_re.so
+security.selinux="u:object_r:vendor_file:s0"
+
+# file: system
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/bin
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/bin/busybox
+security.selinux="u:object_r:init_exec:s0"
+
+# file: system/system/etc
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/etc/font_fallback.xml
+security.selinux="u:object_r:system_font_fallback_file:s0"
+
+# file: system/system/etc/sysconfig
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/etc/sysconfig/config-com.chiller3.bcr.xml
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/etc/fonts.xml
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/etc/permissions
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/etc/permissions/com.oasisfeng.greenify.xml
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/etc/permissions/privapp-permissions-com.chiller3.bcr.xml
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/fonts
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/fonts/GoogleSans-Italic.ttf
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/fonts/GoogleSans-Regular.ttf
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/Greenify
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/Greenify/Greenify.apk
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/com.chiller3.bcr
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/com.chiller3.bcr/app-release.apk
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/v4a
+security.selinux="u:object_r:system_file:s0"
+
+# file: system/system/priv-app/v4a/v4a.apk
+security.selinux="u:object_r:system_file:s0"
+

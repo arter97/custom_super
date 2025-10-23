@@ -1,0 +1,2 @@
+debug.disable_screen_decorations=true
+persist.sys.disable_rescue=true

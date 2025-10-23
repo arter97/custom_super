@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -eo pipefail
+
+TMP=/tmp/$(uuidgen)
+
+# DPI
+cp out/vendor/build.prop $TMP
+sed -i -e '/ro.sf.lcd_density=/d' $TMP
+sed -i -e '/ro.sf.init.lcd_density=/d' $TMP
+echo "" >> $TMP
+echo "ro.sf.lcd_density=480" >> $TMP
+echo "ro.sf.init.lcd_density=480" >> $TMP
+cat $TMP > out/vendor/build.prop
+rm $TMP
+
+# Volume
+echo "ro.config.media_vol_steps=30" >> out/system/system/build.prop
+echo "audio.safemedia.bypass=true" >> out/system/system/build.prop
+
+# Disable NFC debug logging
+echo "persist.nfc.debug_enabled=false" >> out/system/system/build.prop
+
+# Disable logd to forward kernel logs to logcat
+echo "ro.logd.kernel=false" >> out/system/system/build.prop
