@@ -85,7 +85,6 @@ system/system/priv-app/YourPhone*
 
 # Debug
 vendor/bin/cnss_diag
-vendor/bin/diag-router
 vendor/bin/ipacm-diag
 vendor/bin/subsystem_ramdump
 vendor/bin/cnss_dumpcollector
