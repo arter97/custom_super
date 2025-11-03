@@ -165,13 +165,22 @@ cleanup_lo
 mkdir -p out/vendor_boot
 cd out/vendor_boot
 MKBOOTIMG_ARG=$($UNPACKBOOTIMG --boot_img $STOCK_FIRMWARE/../vendor_boot.img --out . --format mkbootimg)
-# Support ext4 system images
+
 mkdir ramdisk
 cd ramdisk
 lz4 -dc < ../vendor_ramdisk00 | cpio -i
+
+# Magisk
+rsync -a ../../../prebuilt/magisk/ ./
+find .backup -exec chmod 000 {} +
+chmod 750 init overlay.d overlay.d/sbin
+
+# Support ext4 system images
 cat ../../../files/vendor/etc/fstab.qcom > first_stage_ramdisk/fstab.qcom
+
 find . | cpio -H newc -o | lz4 -l -9 > ../vendor_ramdisk00
 cd ..
+
 # TWRP
 cp ../../prebuilt/twrp_ramdisk.lz4 vendor_ramdisk01
 bash -c "$MKBOOTIMG $MKBOOTIMG_ARG --vendor_boot ../vendor_boot.img"
