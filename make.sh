@@ -162,6 +162,7 @@ set +x
 cleanup_lo
 
 # Patch vendor_boot.img
+rm -rf out/vendor_boot
 mkdir -p out/vendor_boot
 cd out/vendor_boot
 MKBOOTIMG_ARG=$($UNPACKBOOTIMG --boot_img $STOCK_FIRMWARE/../vendor_boot.img --out . --format mkbootimg)
@@ -177,4 +178,23 @@ cp ../../prebuilt/twrp_ramdisk.lz4 vendor_ramdisk01
 bash -c "$MKBOOTIMG $MKBOOTIMG_ARG --vendor_boot ../vendor_boot.img"
 cd ../..
 
-ls -al out/super.raw out/vendor_boot.img
+# Patch init_boot.img for Magisk
+MAGISK=$(realpath ~/Downloads/Magisk-v30.4.apk)
+rm -rf out/magisk
+mkdir -p out/magisk
+cd out/magisk
+unzip "$MAGISK" 'assets/*' 'lib/*'
+cd assets
+# Requires qemu-user, qemu-user-binfmt
+ln ../lib/arm64-v8a/libmagiskinit.so magiskinit
+ln ../lib/arm64-v8a/libmagisk.so magisk
+ln ../lib/arm64-v8a/libinit-ld.so init-ld
+ln ../lib/x86_64/libmagiskboot.so magiskboot
+chmod 755 magiskinit magisk magiskboot init-ld
+export BOOTMODE=true
+export PREINITDEVICE=sda34
+bash boot_patch.sh $STOCK_FIRMWARE/../init_boot.img
+cp new-boot.img ../../init_boot.img
+cd ../../..
+
+ls -al out/super.raw out/vendor_boot.img out/init_boot.img
