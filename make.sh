@@ -46,6 +46,9 @@ MKFS="mkfs.ext4 \
 AVB=../avb/avbtool.py
 AVB_KEY=../avb/test/data/testkey_rsa4096_pub.pem
 
+MKBOOTIMG=$(realpath ../mkbootimg-google/mkbootimg.py)
+UNPACKBOOTIMG=$(realpath ../mkbootimg-google/unpack_bootimg.py)
+
 avb_get_orig_size() {
   RET=$($AVB info_image --image "$1" | grep '^Original image size:' | awk '{print $4}')
   if [ -z "$RET" ]; then
@@ -158,4 +161,20 @@ lpmake \
 set +x
 cleanup_lo
 
-ls -al out/super.raw
+# Patch vendor_boot.img
+mkdir -p out/vendor_boot
+cd out/vendor_boot
+MKBOOTIMG_ARG=$($UNPACKBOOTIMG --boot_img $STOCK_FIRMWARE/../vendor_boot.img --out . --format mkbootimg)
+# Support ext4 system images
+mkdir ramdisk
+cd ramdisk
+lz4 -dc < ../vendor_ramdisk00 | cpio -i
+cat ../../../files/vendor/etc/fstab.qcom > first_stage_ramdisk/fstab.qcom
+find . | cpio -H newc -o | lz4 -l -9 > ../vendor_ramdisk00
+cd ..
+# TWRP
+cp ../../prebuilt/twrp_ramdisk.lz4 vendor_ramdisk01
+bash -c "$MKBOOTIMG $MKBOOTIMG_ARG --vendor_boot ../vendor_boot.img"
+cd ../..
+
+ls -al out/super.raw out/vendor_boot.img
