@@ -208,9 +208,3 @@ security.selinux="u:object_r:vendor_file:s0"
 # file: vendor/lib64/libvpx.so
 security.selinux="u:object_r:vendor_file:s0"
 
-# file: vendor/lib64/hw
-security.selinux="u:object_r:vendor_hal_file:s0"
-
-# file: vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so
-security.selinux="u:object_r:same_process_hal_file:s0"
-
