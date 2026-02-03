@@ -30,12 +30,3 @@ ro.product.cpu.abilist64=arm64-v8a" >> out/system/system/build.prop
 # Use ssgqmigd64
 cat out/vendor/bin/ssgqmigd64 > out/vendor/bin/ssgqmigd
 rm out/vendor/bin/ssgqmigd64
-
-# Bring minimal 32-bit system/lib files (libc, libm are customized and thus excluded)
-mkdir -p out/system/system/lib
-chmod 755 out/system/system/lib
-chown root:root out/system/system/lib
-chcon u:object_r:system_lib_file:s0 out/system/system/lib
-for i in bootstrap/libdl_android.so bootstrap/libdl.so libapexsupport.so libbase.so libbinder.so libbinder_ndk.so libc++.so libcgrouprc.so libcrypto.so libcutils.so libdl.so libdl_android.so libhardware.so libhidlbase.so liblog.so libnetd_client.so libprocessgroup.so libutils.so libvndksupport.so libz.so; do
-  cp -a orig/system/system/lib/$i out/system/system/lib/
-done
