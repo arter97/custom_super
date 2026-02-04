@@ -4,7 +4,7 @@ set -eo pipefail
 
 TMP=$(uuidgen)
 
-for f in out/system/system/etc/init/cameraserver.rc out/vendor/etc/init/android.hardware.biometrics.face-service.noth.rc out/vendor/etc/init/vendor.qti.camera.provider@2.7-service_64.rc; do
+for f in out/system/system/etc/init/cameraserver.rc out/vendor/etc/init/android.hardware.biometrics.face-service.noth.rc out/vendor/etc/init/vendor.qti.camera.provider@2.7-service_64.rc out/vendor/etc/init/vendor.noth.hardware.camera-service.rc; do
   cat $f > $TMP
   echo "    setenv JE_MALLOC_ZERO_FILLING 1" >> $TMP
   sed -i -e '/^$/d' $TMP
