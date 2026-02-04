@@ -40,20 +40,6 @@ user::rwx
 group::r-x
 other::r-x
 
-# file: system/system/bin/fsck.f2fs
-# owner: 0
-# group: 0
-user::rwx
-group::r-x
-other::r-x
-
-# file: system/system/bin/sload_f2fs
-# owner: 0
-# group: 0
-user::rwx
-group::r-x
-other::r-x
-
 # file: system/system/bin/lmkd
 # owner: 0
 # group: 2000
