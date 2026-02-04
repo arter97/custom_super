@@ -119,8 +119,13 @@ for i in $MOD; do
   SIZE=$(($SIZE * 1024 * 1024))
 
   rm out/$i.img
-  fallocate -l $SIZE out/$i.img
-  $MKFS -L $i -d out/$i out/$i.img
+  if [[ "$SIZE" == "0" ]]; then
+    # Assume erofs
+    mkfs.erofs -zlz4 -T0 --ignore-mtime out/$i.img out/$i
+  else
+    fallocate -l $SIZE out/$i.img
+    $MKFS -L $i -d out/$i out/$i.img
+  fi
 
   echo Created $i: original size = $(du -sh --apparent-size "$STOCK_FIRMWARE/$i.img" | awk '{print $1}'), new size = $(du -sh --apparent-size "out/$i.img" | awk '{print $1}')
  ) &
@@ -134,7 +139,11 @@ ARG=""
 while read img; do
   PART_NAME=$(echo $img | sed 's/\.img//g')
   eval SIZE='$'$(echo $PART_NAME | tr '[:lower:]' '[:upper:]')_SIZE
-  SIZE=$(($SIZE * 1024 * 1024))
+  if [[ "$SIZE" == "0" ]]; then
+    SIZE=$(stat -c%s out/$img)
+  else
+    SIZE=$(($SIZE * 1024 * 1024))
+  fi
   ARG="$ARG -p ${PART_NAME}_${INACTIVE_SLOT}:none:0:qti_dynamic_partitions_${INACTIVE_SLOT}"
   ARG="$ARG -p ${PART_NAME}_${ACTIVE_SLOT}:none:${SIZE}:qti_dynamic_partitions_${ACTIVE_SLOT} -i ${PART_NAME}_${ACTIVE_SLOT}=out/$img"
 done < <(ls out/ | grep '\.img$')
