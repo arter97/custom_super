@@ -30,3 +30,6 @@ ro.product.cpu.abilist64=arm64-v8a" >> out/system/system/build.prop
 # Use ssgqmigd64
 cat out/vendor/bin/ssgqmigd64 > out/vendor/bin/ssgqmigd
 rm out/vendor/bin/ssgqmigd64
+
+# Remove 32-bit libraries from /vendor
+find out/vendor -name '*.so' -exec file {} + | grep EABI5 | awk -F: '{print $1}' | xargs rm
