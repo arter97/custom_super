@@ -31,7 +31,7 @@ VENDOR_SIZE=3180
 ACTIVE_SLOT=a
 INACTIVE_SLOT=b
 
-STOCK_FIRMWARE=/home/arter97/android/nothing/4.0-251226/dyn
+STOCK_FIRMWARE=/home/arter97/android/nothing/4.0-260226/dyn
 
 TMP=/tmp/$(uuidgen)
 
