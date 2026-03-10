@@ -24,6 +24,8 @@ product/app/Photos
 product/app/Videos
 product/app/YouTube
 product/app/YTMusic
+product/app/CalendarGoogle
+product/app/SpeechServicesByGoogle
 
 # Fix DRM to L3
 vendor/lib/liboemcrypto.so
