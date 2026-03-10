@@ -2,7 +2,7 @@
 
 set -eo pipefail
 
-VERSION="r40b1"
+VERSION="r40"
 
 TMP=/tmp/$(uuidgen)
 
