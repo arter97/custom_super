@@ -2,14 +2,12 @@
 
 set -eo pipefail
 
-VERSION="-arter97-r40b1"
+VERSION="r40b1"
 
 TMP=/tmp/$(uuidgen)
 
 # Version
-sed -e "/ro.nothing.version.id=/ s/\$/${VERSION}/" out/system/system/build.prop > $TMP
-cat $TMP > out/system/system/build.prop
-rm $TMP
+echo "# NothingMuch ROM $VERSION by arter97" >> out/system/system/build.prop
 
 # DPI
 cp out/product/etc/build.prop $TMP
