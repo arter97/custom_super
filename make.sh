@@ -179,7 +179,7 @@ bash -c "$MKBOOTIMG $MKBOOTIMG_ARG --vendor_boot ../vendor_boot.img"
 cd ../..
 
 # Patch init_boot.img for Magisk
-MAGISK=$(realpath ~/Downloads/Magisk-v30.4.apk)
+MAGISK=$(realpath ~/Downloads/Magisk-v30.7.apk)
 rm -rf out/magisk
 mkdir -p out/magisk
 cd out/magisk
