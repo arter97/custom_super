@@ -32,7 +32,7 @@ VENDOR_SIZE=5000
 ACTIVE_SLOT=a
 INACTIVE_SLOT=b
 
-STOCK_FIRMWARE=/home/arter97/android/samsung/firmware/s937n/S937NKSS6BZB2/images/dyn
+STOCK_FIRMWARE=/home/arter97/android/samsung/firmware/s937n/S937NKSS6BZC1/images/dyn
 
 TMP=/tmp/$(uuidgen)
 
