@@ -1,23 +1,15 @@
-!!brut.androlib.meta.MetaInfo
+version: 3.0.1
 apkFileName: arter97FrameworksOverlay.apk
-compressionType: false
-doNotCompress:
-- resources.arsc
-isFrameworkApk: false
-packageInfo:
-  forcedPackageId: '127'
-  renameManifestPackage: null
-sdkInfo:
-  minSdkVersion: '33'
-  targetSdkVersion: '33'
-sharedLibrary: false
-sparseResources: false
-unknownFiles: {}
 usesFramework:
   ids:
   - 1
-  tag: null
-version: 2.4.1
+sdkInfo:
+  minSdkVersion: 33
+  targetSdkVersion: 33
 versionInfo:
-  versionCode: '33'
-  versionName: '13'
+  versionCode: 33
+  versionName: 13
+resourcesInfo:
+  packageId: 127
+doNotCompress:
+- arsc
